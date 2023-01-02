@@ -29,15 +29,16 @@ public class ProdutoDAO { //Data Assets Objects
         Cursor cursor = read.rawQuery(sql, null);
 
         while (cursor.moveToNext()) {
-            cursor.getInt(cursor.getColumnIndex("id"));
+            int id = cursor.getInt(cursor.getColumnIndex("id"));
             String nome = cursor.getString(cursor.getColumnIndex("nome"));
             int estoque = cursor.getInt(cursor.getColumnIndex("estoque"));
             double valor = cursor.getDouble(cursor.getColumnIndex("valor"));
 
-            Produto produto = new Produto();
-            produto.setNome(nome);
-            produto.setEstoque(estoque);
-            produto.setValor(valor);
+            Produto produto = new Produto(id, nome, estoque, valor);
+//            produto.setId(id);
+//            produto.setNome(nome);
+//            produto.setEstoque(estoque);
+//            produto.setValor(valor);
 
             produtoList.add(produto);
         }
