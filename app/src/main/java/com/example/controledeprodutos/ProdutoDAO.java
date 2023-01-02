@@ -35,11 +35,6 @@ public class ProdutoDAO { //Data Assets Objects
             double valor = cursor.getDouble(cursor.getColumnIndex("valor"));
 
             Produto produto = new Produto(id, nome, estoque, valor);
-//            produto.setId(id);
-//            produto.setNome(nome);
-//            produto.setEstoque(estoque);
-//            produto.setValor(valor);
-
             produtoList.add(produto);
         }
 

@@ -1,11 +1,14 @@
 package com.example.controledeprodutos;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Binder;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +18,7 @@ public class FormProdutoActivity extends AppCompatActivity {
     private EditText edit_produto, edit_quantidade, edit_valor;
     private ProdutoDAO produtoDAO;
     private Produto produto;
+    private ImageButton voltar;
 
 
     @Override
@@ -27,6 +31,7 @@ public class FormProdutoActivity extends AppCompatActivity {
         edit_produto = findViewById(R.id.edit_produto);
         edit_quantidade = findViewById(R.id.edit_quantidade);
         edit_valor = findViewById(R.id.edit_valor);
+        voltar = findViewById(R.id.ib_voltar);
 
         Bundle bundle = getIntent().getExtras();
 
@@ -35,6 +40,11 @@ public class FormProdutoActivity extends AppCompatActivity {
             editProduto();
         }
 
+    }
+
+    public void voltar(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void salvarProduto(View view) {
