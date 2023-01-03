@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
             //Left
             @Override
             public void onSwipedLeft(int position) {
+                Produto produto = produtoList.get(position);
+                editItem(produto);
 
             }
             //Right
@@ -103,6 +105,12 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
 
             }
         });
+    }
+
+    private void editItem(Produto produto){
+        Intent intent = new Intent(this, FormProdutoActivity.class);
+        intent.putExtra("produto", produto);
+        startActivity(intent);
     }
 
     private void verificaQtdLista(){
