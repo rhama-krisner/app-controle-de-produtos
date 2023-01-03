@@ -65,7 +65,6 @@ public class ProdutoDAO { //Data Assets Objects
         String[] args = {String.valueOf(produto.getId())};
         try {
             write.update(DBHelper.TB_PRODUTO, cv, where, args);
-            //write.close();
         } catch (Exception e) {
             Log.i("ERROR", "Erro ao atualizar produto" + e.getMessage());
         }
@@ -76,7 +75,7 @@ public class ProdutoDAO { //Data Assets Objects
         String[] args = {String.valueOf(produto.getId())};
         String where = "id=?";
         write.delete(DBHelper.TB_PRODUTO, where, args);
-//      write.close();
+        write.close();
     }
 
 }

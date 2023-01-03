@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Produto"
-            android:textColor="@color/white"/>
+            android:textColor="#263238" />
 
         <EditText
             android:id="@+id/edit_produto"
@@ -38,31 +38,35 @@
             android:background="@drawable/bg_edit"
             android:hint="Nome do produto"
             android:inputType="text|textAutoCorrect|textCapWords"
-            android:padding="16dp" />
+            android:padding="16dp"
+            android:textColorHint="#757575"
+            android:autofillHints="" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Estoque"
-            android:textColor="@color/white"/>
+            android:textColor="#263238" />
 
         <EditText
             android:id="@+id/edit_quantidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
+            android:autofillHints=""
             android:background="@drawable/bg_edit"
             android:hint="Quantidade"
             android:inputType="number"
-            android:padding="16dp" />
+            android:padding="16dp"
+            android:textColorHint="#757575" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Valor"
-            android:textColor="@color/white"/>
+            android:textColor="#263238" />
 
         <EditText
             android:id="@+id/edit_valor"
@@ -72,7 +76,9 @@
             android:background="@drawable/bg_edit"
             android:hint="Valor do produto"
             android:inputType="numberDecimal"
-            android:padding="16dp" />
+            android:padding="16dp"
+            android:textColorHint="#757575"
+            android:autofillHints="" />
 
         <Button
             android:layout_width="match_parent"
